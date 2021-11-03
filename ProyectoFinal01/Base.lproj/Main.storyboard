@@ -83,7 +83,7 @@
                                 <rect key="frame" x="49" y="523" width="324" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="pl2-f2-jw3" kind="show" id="xYE-AG-xuL"/>
+                                    <segue destination="zUD-kZ-1uS" kind="show" id="hBu-iV-AWh"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83z-59-8PY">
@@ -123,9 +123,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waz-0S-XH9">
                                 <rect key="frame" x="50" y="477" width="314" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="zUD-kZ-1uS" kind="show" id="z8p-Aw-yWm"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYL-Yf-Eig">
                                 <rect key="frame" x="66" y="386" width="286" height="34"/>
@@ -141,9 +138,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg8-q9-AHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598.5507246376815" y="116.51785714285714"/>
+            <point key="canvasLocation" x="4128" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu principal-->
         <scene sceneID="uSH-Sj-Um5">
             <objects>
                 <viewController id="zUD-kZ-1uS" sceneMemberID="viewController">
@@ -187,11 +184,11 @@
                         <viewLayoutGuide key="safeArea" id="Zep-3g-Gy0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Dkb-fH-yi2"/>
+                    <navigationItem key="navigationItem" title="Menu principal" id="Dkb-fH-yi2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vr1-yC-xyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3353.6231884057975" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2704" y="117"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mkz-9O-dSY">
@@ -298,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="8090" y="810"/>
         </scene>
-        <!--Lugar Seguro Table View Controller-->
+        <!--Lugar seguro-->
         <scene sceneID="2do-D6-fq9">
             <objects>
                 <tableViewController id="Za8-Wj-3vZ" customClass="lugarSeguroTableViewController" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
@@ -321,13 +318,13 @@
                             <outlet property="delegate" destination="Za8-Wj-3vZ" id="Hk6-nO-h8Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AHc-D3-mSt"/>
+                    <navigationItem key="navigationItem" title="Lugar seguro" id="AHc-D3-mSt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYq-u2-OVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2955" y="840"/>
         </scene>
-        <!--View Controller-->
+        <!--Llamar-->
         <scene sceneID="65Q-cu-GVt">
             <objects>
                 <viewController id="YXn-wx-J7d" sceneMemberID="viewController">
@@ -350,13 +347,13 @@
                         <viewLayoutGuide key="safeArea" id="XI5-Hi-Y9r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0nE-Dr-wEZ"/>
+                    <navigationItem key="navigationItem" title="Llamar" id="0nE-Dr-wEZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiT-7C-aBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3666.666666666667" y="839.73214285714278"/>
         </scene>
-        <!--Persona Segura Table View Controller-->
+        <!--Contactos-->
         <scene sceneID="fnV-BM-ZiZ">
             <objects>
                 <tableViewController id="CqQ-Mf-Lx0" customClass="personaSeguraTableViewController" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
@@ -379,7 +376,7 @@
                             <outlet property="delegate" destination="CqQ-Mf-Lx0" id="4Ok-vL-0lW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1ye-Iu-kRu"/>
+                    <navigationItem key="navigationItem" title="Contactos" id="1ye-Iu-kRu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gm-gI-Kdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

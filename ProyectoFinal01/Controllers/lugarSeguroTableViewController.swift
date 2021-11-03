@@ -2,16 +2,22 @@
 //  lugarSeguroTableViewController.swift
 //  ProyectoFinal01
 //
-//  Created by Jose Gerardo Moran Hernandez on 04/10/21.
+//
 //
 
 import UIKit
-
+import Firebase
 class lugarSeguroTableViewController: UITableViewController {
     var datos = [lugarSeguro]()
+    let db = Firestore.firestore()
     var LugarSeguroControlador = lugarSeguroControlador()
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
