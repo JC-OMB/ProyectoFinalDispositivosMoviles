@@ -6,5 +6,8 @@ target 'ProyectoFinal01' do
   use_frameworks!
 
   # Pods for ProyectoFinal01
+  pod 'Firebase/Firestore'
 
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
 end
