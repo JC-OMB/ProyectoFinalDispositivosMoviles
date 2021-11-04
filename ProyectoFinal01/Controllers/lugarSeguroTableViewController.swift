@@ -8,9 +8,35 @@
 import UIKit
 import Firebase
 class lugarSeguroTableViewController: UITableViewController {
-    var datos = [lugarSeguro]()
     let db = Firestore.firestore()
+    var datos = [lugarSeguro]()
     var LugarSeguroControlador = lugarSeguroControlador()
+    var datosFiltrados = [lugarSeguro]()
+    let searchController = UISearchController(searchResultsController: nil)
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        // si la caja de búsuqeda es vacía, entonces mostrar todos los resultados
+        if searchController.searchBar.text! == "" {
+            datosFiltrados = datos
+        } else {
+            // Filtrar los resultados de acuerdo al texto escrito en la caja que es obtenido a través del parámetro $0
+            //$0 es un objeto tipo Raza
+            datosFiltrados = datos.filter{
+                let s:String = $0.direccion
+                return(s.lowercased().contains(searchController.searchBar.text!.lowercased())) }
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        lugarSeguroControlador.fetchlugarSeguro{ (resultado) in
+            switch resultado{
+            case .success(let listaLugaresSeguros):self.updateGUI(listaLugaresSeguros: listaLugaresSeguros)
+            case .failure(let error):self.displayError(e: error)
+            }
+    }
+    }
 
 
 

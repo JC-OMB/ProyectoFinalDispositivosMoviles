@@ -6,31 +6,43 @@
 //
 
 import Foundation
+import Firebase
 class lugarSeguroControlador{
+    let db = Firestore.firestore()
     
-    func fetchlugarSeguro(completion: @escaping (Result<lS,Error>)->Void){
+    func fetchlugarSeguro(completion: @escaping (Result<[lS],Error>)->Void){
         
-        var urlComponents = URLComponents(string: "http://martinmolina.com.mx/202113/tc2024/equipo3/lugarSeguro.json")!
+        var lista_direcciones = [lS]()
 
 
-        let task = URLSession.shared.dataTask(with: urlComponents.url!) { (data, response, error) in
+       
+        db.collection("lugaresSeguros").getDocuments() { (querySnapshot, err) in
             let jsonDecoder = JSONDecoder()
-            if let data = data{
-                do{
-                    let lS = try? jsonDecoder.decode([lugarSeguro].self, from: data)
-                    completion(.success(lS!))
-                }
-                catch{
-                    completion(.failure(error))
-                }
+            if let err = err{
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
             }
             else {
-                completion(.failure(error as! Error))
+                for document in querySnapshot!.documents {
+                    var dir = lS(d: document)
+                    lista_direcciones.append(dir)
+            }
+                completion(.success(lista_direcciones))
+            
+        }
+        
+    }
+}
+    func updateDirecciones(direccionActualizada: lugarSeguro,completion: @escaping (Result<String,Error>)->Void){
+        db.collection("lugaresSeguros").document(direccionActualizada.direccion).updateData([
+                                                                        "ubicacion":direccionActualizada.direccion]){ err in
+            if let err = err {
+                completion(.failure(err))
+            } else{
+                completion(.success("Registro modificado"))
             }
             
         }
-
-        task.resume()
-        
     }
+    
 }
