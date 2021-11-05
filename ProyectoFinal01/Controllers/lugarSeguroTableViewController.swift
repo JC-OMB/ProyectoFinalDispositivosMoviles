@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-class lugarSeguroTableViewController: UITableViewController {
+class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpdating {
     let db = Firestore.firestore()
     var datos = [lugarSeguro]()
     var LugarSeguroControlador = lugarSeguroControlador()
@@ -30,9 +30,9 @@ class lugarSeguroTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        lugarSeguroControlador.fetchlugarSeguro{ (resultado) in
+        LugarSeguroControlador.fetchlugarSeguro{ (resultado) in
             switch resultado{
-            case .success(let listaLugaresSeguros):self.updateGUI(listaLugaresSeguros: listaLugaresSeguros)
+            case .success(let listaLugarSeguro):self.updateGUI(listaLugarSeguro: listaLugarSeguro)
             case .failure(let error):self.displayError(e: error)
             }
     }
@@ -56,6 +56,15 @@ class lugarSeguroTableViewController: UITableViewController {
             case .failure(let error):self.displayError(e: error)
             }
         }
+        //Paso 6: usar la vista actual para presentar los resultados de la búsqueda
+        searchController.searchResultsUpdater = self
+        //paso 7: controlar el background de los datos al momento de hacer la búsqueda
+        searchController.dimsBackgroundDuringPresentation = false
+        //Paso 8: manejar la barra de navegación durante la busuqeda
+        searchController.hidesNavigationBarDuringPresentation = false
+        //Paso 9: Instalar la barra de búsqueda en la cabecera de la tabla
+        tableView.tableHeaderView = searchController.searchBar
+        
     }
 
     func updateGUI(listaLugarSeguro: lS){
