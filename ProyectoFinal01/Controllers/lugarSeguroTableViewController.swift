@@ -66,7 +66,7 @@ class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpda
         tableView.tableHeaderView = searchController.searchBar
         
     }
-
+    //update de la base de datos
     func updateGUI(listaLugarSeguro: lS){
         DispatchQueue.main.async {
             self.datos = listaLugarSeguro
@@ -148,7 +148,52 @@ class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpda
         // Pass the selected object to the new view controller.
         let siguiente = segue.destination as! detalleLugarSeguroViewController
         let indice = self.tableView.indexPathForSelectedRow?.row
-        siguiente.lugarSeg = datos[indice!]
+        siguiente.lugarSeg = datosFiltrados[indice!]
     }
-
+    
+    //permitira insertar una nueva ubicacion segura a nuestra base de datos
+    @IBAction func insertarLugarSeguro(_ sender: UIBarButtonItem){
+        let siguienteVista = storyboard!.instantiateViewController(withIdentifier: "insertarLugarSeguro")
+        siguienteVista.modalPresentationStyle = .fullScreen
+        self.present(siguienteVista, animated:true, completion:nil)
+    }
+    //nos permitira editar nuestra tabla
+    @IBAction func editarTabla(_ sender: UIBarButtonItem) {
+        let modoEdicion = tableView.isEditing
+        tableView.setEditing(!modoEdicion, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            LugarSeguroControlador.deleteUbicacion(registroID: datosFiltrados[indexPath.row].direccion){ (resultado) in
+                switch resultado{
+                case .success(let retorno): self.updateUI()//self.viewDidAppear(true)
+                case .failure(let error):self.displayError(e: error)
+                }
+                
+            }
+            
+        }
+    }
+    
+    //update UI
+    func updateUI(){
+        
+        LugarSeguroControlador.fetchlugarSeguro{ (resultado) in
+            switch resultado{
+            case .success(let listaLugarSeguro):self.updateGUI(listaLugarSeguro: listaLugarSeguro)
+            case .failure(let error):self.displayError(e: error)
+            }
+    }
+    }
+    
+    
+    func displayError(_ error: Error, title: String) {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    
 }

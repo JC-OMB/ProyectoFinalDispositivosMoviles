@@ -318,7 +318,20 @@
                             <outlet property="delegate" destination="Za8-Wj-3vZ" id="Hk6-nO-h8Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lugar seguro" id="AHc-D3-mSt"/>
+                    <navigationItem key="navigationItem" title="Lugar seguro" id="AHc-D3-mSt">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="LWf-xY-9LM">
+                                <connections>
+                                    <action selector="insertarLugarSeguro:" destination="Za8-Wj-3vZ" id="1ft-he-0sc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="editar" id="reX-dC-ocu">
+                                <connections>
+                                    <action selector="editarTabla:" destination="Za8-Wj-3vZ" id="6Xc-bd-rC6"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYq-u2-OVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,6 +394,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gm-gI-Kdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5083" y="846"/>
+        </scene>
+        <!--Agregar Direccion-->
+        <scene sceneID="SoE-gO-Unr">
+            <objects>
+                <viewController storyboardIdentifier="insertarLugarSeguro" id="Ha9-eH-8Eg" customClass="agregarDireccion" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ew9-dW-nkx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insertar nueva direccion segura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTc-gx-i7i">
+                                <rect key="frame" x="87" y="207" width="241" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-Wj-QSZ">
+                                <rect key="frame" x="87" y="296" width="241" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tma-7x-YOf">
+                                <rect key="frame" x="95" y="531" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelarGrabacionUbicacion:" destination="Ha9-eH-8Eg" eventType="touchUpInside" id="oog-eG-T6J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieo-L5-29C">
+                                <rect key="frame" x="250" y="531" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="aceptarGrabacionUbicacion:" destination="Ha9-eH-8Eg" eventType="touchUpInside" id="bN3-2l-i1P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w49-Wr-Znq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="ubicacion" destination="t8h-Wj-QSZ" id="zNo-Fp-WEW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddW-bV-4bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953.6231884057975" y="1555.5803571428571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="auQ-Ig-HxH">

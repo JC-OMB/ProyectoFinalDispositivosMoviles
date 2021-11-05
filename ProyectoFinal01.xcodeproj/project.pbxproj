@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142987542734B87300CED510 /* agregarDireccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142987532734B87300CED510 /* agregarDireccion.swift */; };
 		145FF95D2706A99C00B65A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FF95C2706A99C00B65A49 /* AppDelegate.swift */; };
 		145FF95F2706A99C00B65A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FF95E2706A99C00B65A49 /* SceneDelegate.swift */; };
 		145FF9612706A99C00B65A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FF9602706A99C00B65A49 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142987532734B87300CED510 /* agregarDireccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregarDireccion.swift; sourceTree = "<group>"; };
 		145FF9592706A99C00B65A49 /* ProyectoFinal01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinal01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		145FF95C2706A99C00B65A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		145FF95E2706A99C00B65A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */,
 				145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */,
 				145FF96A2706A9A300B65A49 /* Info.plist */,
+				142987532734B87300CED510 /* agregarDireccion.swift */,
 			);
 			path = ProyectoFinal01;
 			sourceTree = "<group>";
@@ -134,7 +137,6 @@
 				6B7C82C453EEA15F99657B89 /* Pods-ProyectoFinal01.debug.xcconfig */,
 				981EE08F6B7929BA2A2020B8 /* Pods-ProyectoFinal01.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -264,6 +266,7 @@
 				2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */,
 				2DD40FAD270C0C3500183612 /* detallePersonaSeguraViewController.swift in Sources */,
 				2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */,
+				142987542734B87300CED510 /* agregarDireccion.swift in Sources */,
 				145FF95F2706A99C00B65A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

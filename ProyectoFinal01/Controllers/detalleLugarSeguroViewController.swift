@@ -10,6 +10,8 @@ import UIKit
 class detalleLugarSeguroViewController: UIViewController {
     var lugarSeg: lugarSeguro?
     @IBOutlet weak var lugarEtiqueta: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lugarEtiqueta.text = lugarSeg?.direccion
