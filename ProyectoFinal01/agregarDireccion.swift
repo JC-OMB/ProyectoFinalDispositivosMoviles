@@ -12,15 +12,12 @@ class agregarDireccion: UIViewController {
     let LugarSeguroControlador = lugarSeguroControlador()
     
     @IBOutlet weak var ubicacion: UITextField!
-    
-    
     @IBAction func cancelarGrabacionUbicacion(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func aceptarGrabacionUbicacion(_ sender: Any) {
-        var nuevaUbicacion = lugarSeguro(direccion: ubicacion.text!, desc: "")
-        
+        var nuevaUbicacion = lugarSeguro(id:"", direccion: ubicacion.text!)
         LugarSeguroControlador.insertUbicacion(nuevaUbicacion: nuevaUbicacion){
             (resultado) in
             switch resultado{

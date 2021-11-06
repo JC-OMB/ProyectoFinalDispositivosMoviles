@@ -34,7 +34,7 @@ class lugarSeguroControlador{
 }
     //update de las direcciones
     func updateDirecciones(direccionActualizada: lugarSeguro,completion: @escaping (Result<String,Error>)->Void){
-        db.collection("lugaresSeguros").document(direccionActualizada.direccion).updateData([
+        db.collection("lugaresSeguros").document(direccionActualizada.id).updateData([
                                                                         "ubicacion":direccionActualizada.direccion]){ err in
             if let err = err {
                 completion(.failure(err))

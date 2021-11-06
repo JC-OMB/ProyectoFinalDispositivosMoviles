@@ -165,7 +165,8 @@ class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpda
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            LugarSeguroControlador.deleteUbicacion(registroID: datosFiltrados[indexPath.row].direccion){ (resultado) in
+            //Aqui estaba el problema para borrado, estaba utilizando el datosFiltrados y debia ser solamente datos
+            LugarSeguroControlador.deleteUbicacion(registroID: datos[indexPath.row].id){ (resultado) in
                 switch resultado{
                 case .success(let retorno): self.updateUI()//self.viewDidAppear(true)
                 case .failure(let error):self.displayError(e: error)
