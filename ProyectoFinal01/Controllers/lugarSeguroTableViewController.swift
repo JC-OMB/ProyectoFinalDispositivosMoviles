@@ -7,8 +7,11 @@
 
 import UIKit
 import Firebase
+
 class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpdating {
+    
     let db = Firestore.firestore()
+    
     var datos = [lugarSeguro]()
     var LugarSeguroControlador = lugarSeguroControlador()
     var datosFiltrados = [lugarSeguro]()

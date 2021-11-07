@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "338A2662-73B1-4C64-A333-196620FD7803"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF435690-319A-4FA3-81C5-A796C975CB59"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "lugarSeguroTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - d2f8cb18f13b649a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.__deallocating_deinit"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - 5dc27f3578ca41d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.__allocating_init(style: __C.UITableViewStyle) -&gt; ProyectoFinal01.lugarSeguroTableViewController"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - 135c3798204ad5ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.init(style: __C.UITableViewStyle) -&gt; ProyectoFinal01.lugarSeguroTableViewController"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - 4b9a14d003568bd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProyectoFinal01.lugarSeguroTableViewController"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - d322a41dd31173b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProyectoFinal01.lugarSeguroTableViewController"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "278">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - 1811c9a752207"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoFinal01.lugarSeguroTableViewController&gt;"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "CF435690-319A-4FA3-81C5-A796C975CB59 - 9bbe3b7f879c7e8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal01.lugarSeguroTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoFinal01.lugarSeguroTableViewController&gt;"
+                  moduleName = "ProyectoFinal01"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user189968/Documents/GitHub/ProyectoFinalDispositivosMoviles/ProyectoFinal01/Controllers/lugarSeguroTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2584CB6D-A25A-436D-8E0C-82FA7505EC03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProyectoFinal01/Controllers/personaSeguraTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

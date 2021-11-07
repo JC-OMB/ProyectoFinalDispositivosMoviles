@@ -6,13 +6,29 @@
 //
 
 import UIKit
+import Firebase
 
 class personaSeguraTableViewController: UITableViewController {
+    
+    let db = Firestore.firestore()
+    
     var datos = [personaSegura]()
     var PersonaSeguraControlador = personaSeguraControlador()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        PersonaSeguraControlador.fetchPersonaSegura{ (resultado) in
+            switch resultado{
+            case .success(let listaPersonaSegura):self.updateGUI(listaPersonaSegura: listaPersonaSegura)
+            case .failure(let error):self.displayError(e: error)
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

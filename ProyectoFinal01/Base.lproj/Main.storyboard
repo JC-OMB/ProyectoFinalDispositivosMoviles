@@ -433,6 +433,77 @@
             </objects>
             <point key="canvasLocation" x="3666.666666666667" y="839.73214285714278"/>
         </scene>
+        <!--Detalle Contacto-->
+        <scene sceneID="NZ5-oP-odl">
+            <objects>
+                <viewController id="Sls-eD-VSv" customClass="detallePersonaSeguraViewController" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AUw-Qj-NEz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-8q-YVP">
+                                <rect key="frame" x="186" y="251" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-uM-1ye">
+                                <rect key="frame" x="87" y="312" width="240" height="272"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Wm0-Na-vCQ"/>
+                                    <constraint firstAttribute="height" constant="272" id="dhL-zh-Tzu"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6o-7M-E3I">
+                                <rect key="frame" x="81" y="672" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarPersona:" destination="Sls-eD-VSv" eventType="touchUpInside" id="JKM-Kl-j9H"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czb-dK-8iM">
+                                <rect key="frame" x="273" y="672" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelarEdicionPersona:" destination="Sls-eD-VSv" eventType="touchUpInside" id="QiI-1u-oYV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a3v-Fx-Rqo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dwp-uM-1ye" firstAttribute="centerY" secondItem="AUw-Qj-NEz" secondAttribute="centerY" id="5Ey-Kb-cAw"/>
+                            <constraint firstItem="kfl-8q-YVP" firstAttribute="centerX" secondItem="AUw-Qj-NEz" secondAttribute="centerX" id="QgO-pm-H0P"/>
+                            <constraint firstItem="Dwp-uM-1ye" firstAttribute="top" secondItem="kfl-8q-YVP" secondAttribute="bottom" constant="40" id="vkb-aX-SJj"/>
+                            <constraint firstItem="Dwp-uM-1ye" firstAttribute="centerX" secondItem="AUw-Qj-NEz" secondAttribute="centerX" id="wIn-Ho-dBo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalle Contacto" id="1K4-jn-eis">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Ud7-WU-zJD">
+                            <connections>
+                                <action selector="editarPersona:" destination="Sls-eD-VSv" id="kIF-HP-YFo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelPersona" destination="Czb-dK-8iM" id="K4q-Z9-aQp"/>
+                        <outlet property="descripcionVistaTexto" destination="Dwp-uM-1ye" id="qbu-Vl-7Jn"/>
+                        <outlet property="editarPersonaB" destination="Ud7-WU-zJD" id="O3c-Rb-uOa"/>
+                        <outlet property="personaEtiqueta" destination="kfl-8q-YVP" id="xpi-2X-plj"/>
+                        <outlet property="savePersona" destination="r6o-7M-E3I" id="NxD-Db-q7F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfp-v0-2Ht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4382.608695652174" y="864.50892857142856"/>
+        </scene>
         <!--Contactos-->
         <scene sceneID="fnV-BM-ZiZ">
             <objects>
@@ -449,6 +520,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Sls-eD-VSv" kind="show" id="17V-oW-2bx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -456,7 +530,9 @@
                             <outlet property="delegate" destination="CqQ-Mf-Lx0" id="4Ok-vL-0lW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contactos" id="1ye-Iu-kRu"/>
+                    <navigationItem key="navigationItem" title="Contactos" id="1ye-Iu-kRu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uFZ-J8-xEn"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gm-gI-Kdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -675,6 +751,9 @@
         <image name="8" width="164.5" height="358"/>
         <image name="9" width="164.5" height="358"/>
         <image name="logopng" width="422" height="574"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

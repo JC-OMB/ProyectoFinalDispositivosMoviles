@@ -5,7 +5,9 @@
 // 
 //
 import Firebase
+
 struct lugarSeguro: Decodable{
+    
     var id:String
     var direccion:String
     
