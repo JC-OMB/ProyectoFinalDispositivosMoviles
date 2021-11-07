@@ -16,9 +16,6 @@
 		145FF9692706A9A300B65A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */; };
 		148F04962732253900BCDD5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 148F04952732253900BCDD5E /* GoogleService-Info.plist */; };
 		27597A91AD1E0EF8DC0C01AC /* Pods_ProyectoFinal01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF5B546295B32B419A7429 /* Pods_ProyectoFinal01.framework */; };
-		2D368C8727362A3800585478 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D368C8627362A3800585478 /* LogInViewController.swift */; };
-		2D368C8A27362C0100585478 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D368C8927362C0100585478 /* RegisterViewController.swift */; };
-		2D368C8D27363C1000585478 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D368C8C27363C1000585478 /* HomeViewController.xib */; };
 		2DD40FA4270C0B1600183612 /* lugarSeguroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA3270C0B1600183612 /* lugarSeguroTableViewController.swift */; };
 		2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA6270C0B4800183612 /* personaSeguraTableViewController.swift */; };
 		2DD40FAA270C0C1A00183612 /* detalleLugarSeguroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA9270C0C1A00183612 /* detalleLugarSeguroViewController.swift */; };
@@ -41,9 +38,6 @@
 		145FF9682706A9A300B65A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		145FF96A2706A9A300B65A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148F04952732253900BCDD5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2D368C8627362A3800585478 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		2D368C8927362C0100585478 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		2D368C8C27363C1000585478 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		2DD40FA3270C0B1600183612 /* lugarSeguroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lugarSeguroTableViewController.swift; sourceTree = "<group>"; };
 		2DD40FA6270C0B4800183612 /* personaSeguraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaSeguraTableViewController.swift; sourceTree = "<group>"; };
 		2DD40FA9270C0C1A00183612 /* detalleLugarSeguroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleLugarSeguroViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +67,6 @@
 		145FF9502706A99C00B65A49 = {
 			isa = PBXGroup;
 			children = (
-				2D368C472735ADFA00585478 /* authControllers */,
 				145FF95B2706A99C00B65A49 /* ProyectoFinal01 */,
 				145FF95A2706A99C00B65A49 /* Products */,
 				92F81902504984C6D61FCC31 /* Pods */,
@@ -96,11 +89,9 @@
 				2DD40F93270BEC9C00183612 /* Controllers */,
 				2DD40F92270BEB7500183612 /* models */,
 				145FF95C2706A99C00B65A49 /* AppDelegate.swift */,
-				145FF9602706A99C00B65A49 /* ViewController.swift */,
 				145FF95E2706A99C00B65A49 /* SceneDelegate.swift */,
+				145FF9602706A99C00B65A49 /* ViewController.swift */,
 				145FF9622706A99C00B65A49 /* Main.storyboard */,
-				2D368C8927362C0100585478 /* RegisterViewController.swift */,
-				2D368C8627362A3800585478 /* LogInViewController.swift */,
 				145FF9652706A9A300B65A49 /* Assets.xcassets */,
 				2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */,
 				145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */,
@@ -108,14 +99,6 @@
 				142987532734B87300CED510 /* agregarDireccion.swift */,
 			);
 			path = ProyectoFinal01;
-			sourceTree = "<group>";
-		};
-		2D368C472735ADFA00585478 /* authControllers */ = {
-			isa = PBXGroup;
-			children = (
-				2D368C8C27363C1000585478 /* HomeViewController.xib */,
-			);
-			path = authControllers;
 			sourceTree = "<group>";
 		};
 		2DD40F92270BEB7500183612 /* models */ = {
@@ -221,7 +204,6 @@
 				148F04962732253900BCDD5E /* GoogleService-Info.plist in Resources */,
 				2DD6FA4D270D2AF9008CDC8A /* logo.jpeg in Resources */,
 				145FF9642706A99C00B65A49 /* Main.storyboard in Resources */,
-				2D368C8D27363C1000585478 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +262,8 @@
 				145FF95D2706A99C00B65A49 /* AppDelegate.swift in Sources */,
 				2DD40FA4270C0B1600183612 /* lugarSeguroTableViewController.swift in Sources */,
 				2DD40FB9270C26BA00183612 /* personaSegura.swift in Sources */,
-				2D368C8727362A3800585478 /* LogInViewController.swift in Sources */,
 				2DD40FAA270C0C1A00183612 /* detalleLugarSeguroViewController.swift in Sources */,
 				2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */,
-				2D368C8A27362C0100585478 /* RegisterViewController.swift in Sources */,
 				2DD40FAD270C0C3500183612 /* detallePersonaSeguraViewController.swift in Sources */,
 				2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */,
 				142987542734B87300CED510 /* agregarDireccion.swift in Sources */,

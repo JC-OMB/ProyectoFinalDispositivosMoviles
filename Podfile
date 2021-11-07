@@ -7,7 +7,7 @@ target 'ProyectoFinal01' do
 
   # Pods for ProyectoFinal01
   pod 'Firebase/Firestore'
-  pod 'Firebase/Auth'
+
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
 end
