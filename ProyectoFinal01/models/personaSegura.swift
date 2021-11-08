@@ -17,10 +17,10 @@ struct personaSegura: Decodable{
             case descripcion = "desc"
         }
 
-    init(nombre:String, desc:String, id:String){
+    init(nombre:String, desc:String){
         self.nombre = nombre
         self.descripcion = desc
-        self.id = id
+        self.id = "1234"
     }
     
     init(id:String, nombre:String, desc:String){

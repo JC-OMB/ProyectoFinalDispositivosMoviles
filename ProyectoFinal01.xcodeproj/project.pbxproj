@@ -25,6 +25,7 @@
 		2DD40FBC270C289800183612 /* lugarSeguroControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FBB270C289800183612 /* lugarSeguroControlador.swift */; };
 		2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FBE270C28AD00183612 /* personaSeguraControlador.swift */; };
 		2DD6FA4D270D2AF9008CDC8A /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */; };
+		ED860B282739B81600328C58 /* agregarContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED860B272739B81600328C58 /* agregarContactoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		6B7C82C453EEA15F99657B89 /* Pods-ProyectoFinal01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoFinal01.debug.xcconfig"; path = "Target Support Files/Pods-ProyectoFinal01/Pods-ProyectoFinal01.debug.xcconfig"; sourceTree = "<group>"; };
 		981EE08F6B7929BA2A2020B8 /* Pods-ProyectoFinal01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoFinal01.release.xcconfig"; path = "Target Support Files/Pods-ProyectoFinal01/Pods-ProyectoFinal01.release.xcconfig"; sourceTree = "<group>"; };
 		DBDF5B546295B32B419A7429 /* Pods_ProyectoFinal01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoFinal01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED860B272739B81600328C58 /* agregarContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregarContactoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */,
 				145FF96A2706A9A300B65A49 /* Info.plist */,
 				142987532734B87300CED510 /* agregarDireccion.swift */,
+				ED860B272739B81600328C58 /* agregarContactoViewController.swift */,
 			);
 			path = ProyectoFinal01;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				2DD40FB9270C26BA00183612 /* personaSegura.swift in Sources */,
 				2DD40FAA270C0C1A00183612 /* detalleLugarSeguroViewController.swift in Sources */,
 				2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */,
+				ED860B282739B81600328C58 /* agregarContactoViewController.swift in Sources */,
 				2DD40FAD270C0C3500183612 /* detallePersonaSeguraViewController.swift in Sources */,
 				2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */,
 				142987542734B87300CED510 /* agregarDireccion.swift in Sources */,
