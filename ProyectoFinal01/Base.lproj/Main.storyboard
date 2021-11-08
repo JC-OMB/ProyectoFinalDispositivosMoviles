@@ -456,7 +456,20 @@
                             <outlet property="delegate" destination="CqQ-Mf-Lx0" id="4Ok-vL-0lW"/>
                         </connections>
                     </tableView>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" title="Contactos" id="1ye-Iu-kRu"/>
+=======
+                    <navigationItem key="navigationItem" title="Contactos" id="1ye-Iu-kRu">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="uFZ-J8-xEn">
+                                <connections>
+                                    <action selector="InsertarContacto:" destination="CqQ-Mf-Lx0" id="p3a-wc-eyg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="cbo-Xn-Yul"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+>>>>>>> Stashed changes
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gm-gI-Kdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,6 +608,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UK-1W-KOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4390" y="1570"/>
+        </scene>
+        <!--Agregar Contacto View Controller-->
+        <scene sceneID="hSB-Oi-xfc">
+            <objects>
+                <viewController storyboardIdentifier="InsertarContacto" id="Igd-GJ-mRB" customClass="agregarContactoViewController" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rds-GS-J2F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insertar nuevo contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDw-iV-qV7">
+                                <rect key="frame" x="117" y="200" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-QX-7qJ">
+                                <rect key="frame" x="174" y="277" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpE-Mk-BXZ">
+                                <rect key="frame" x="186" y="461" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-AC-2s2">
+                                <rect key="frame" x="122" y="325" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nombreContacto:" destination="Igd-GJ-mRB" eventType="editingDidEnd" id="oRf-7a-d1m"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-X4-4TY">
+                                <rect key="frame" x="66" y="509" width="261" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-qi-wra">
+                                <rect key="frame" x="55" y="817" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="CancelarGrabacionContacto:" destination="Igd-GJ-mRB" eventType="touchUpInside" id="eIv-Mw-zgj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-Ac-aIb">
+                                <rect key="frame" x="313" y="817" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="insertarContacto:" destination="Igd-GJ-mRB" eventType="touchUpInside" id="wic-BU-rZ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QIH-RE-JHE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="descripcionContacto" destination="9lj-X4-4TY" id="sjD-T3-tP5"/>
+                        <outlet property="nombreContacto" destination="Ozv-AC-2s2" id="AvH-FM-gcv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrL-23-oP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5653.6231884057979" y="147.99107142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yF8-8w-UsN">

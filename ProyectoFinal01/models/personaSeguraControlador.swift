@@ -33,4 +33,32 @@ class personaSeguraControlador{
         task.resume()
         
     }
-}
+    
+    func deletePersona(registroID:String, completion: @escaping (Result<String, Error>) -> Void){
+        
+        db.collection("contactosSeguros").document(registroID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+                completion(.failure(err))
+            } else {
+                print("Document successfully removed!")
+                completion(.success("Document successfully removed!"))
+            }
+        }
+    }
+    
+    func insertPersona(nuevaPersona:personaSegura, completion: @escaping (Result<String, Error>) -> Void){
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection("contactosSeguros").addDocument(data: [
+            "nombre": nuevaPersona.nombre,
+            "descripcion": nuevaPersona.descripcion
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+                completion(.failure(err))
+            } else {
+                completion(.success("Documento agregado ID: \(ref!.documentID)"))
+            }
+        }
+    }}

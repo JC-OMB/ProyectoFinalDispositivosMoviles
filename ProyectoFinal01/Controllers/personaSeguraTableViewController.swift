@@ -111,4 +111,8 @@ class personaSeguraTableViewController: UITableViewController {
         siguiente.personaSeg = datos[indice!]
     }
 
+    @IBAction func InsertarContacto(_ sender: UIBarButtonItem) {
+        let siguienteVista = storyboard!.instantiateViewController(withIdentifier: "InsertarContacto") as! UIViewController
+        siguienteVista.modalPresentationStyle = .fullScreen
+        self.present(siguienteVista, animated:true, completion:nil)    }
 }

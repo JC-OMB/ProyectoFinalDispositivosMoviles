@@ -15,6 +15,16 @@ struct personaSegura: Decodable{
         }
 
     init(nombre:String, desc:String){
+<<<<<<< Updated upstream
+=======
+        self.nombre = nombre
+        self.descripcion = desc
+        self.id = "1234"
+    }
+    
+    init(id:String, nombre:String, desc:String){
+        self.id = id
+>>>>>>> Stashed changes
         self.nombre = nombre
         //self.descripcion = desc
     }
