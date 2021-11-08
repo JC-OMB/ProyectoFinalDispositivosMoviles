@@ -42,22 +42,21 @@ class AuthViewController: UIViewController {
     
     
     @IBAction func logIn(_ sender: Any) {
+
         if let email = correo.text, let password = contra.text{
             Auth.auth().signIn(withEmail: email, password: password){
                 (result, error) in
                 if let result = result, error == nil{
                     // funciona log in
-                    /*
-                    self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
-                    */
+
                     // alert que menciona que fue exitoso el log in
-                    
+/*
                     let successController = UIAlertController(title: "Exito", message: "Login Exitoso", preferredStyle: .alert)
                     successController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(successController, animated: true, completion: nil)
- //*/
+ */
                     //
-                    // self.performSegue(withIdentifier: "FirstSegue", sender: self) //<- revisar
+                    self.performSegue(withIdentifier: "signIn", sender: nil) //<- revisar
                 }else{
                     // no funciono el log in
                     // alert que menciona que no fue exitoso el log in

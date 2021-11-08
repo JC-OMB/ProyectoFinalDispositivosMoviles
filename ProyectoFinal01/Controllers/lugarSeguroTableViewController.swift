@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore // <-------
 class lugarSeguroTableViewController: UITableViewController, UISearchResultsUpdating {
     let db = Firestore.firestore()
     var datos = [lugarSeguro]()
