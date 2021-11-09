@@ -8,9 +8,11 @@
 import UIKit
 
 class agregarContactoViewController: UIViewController {
+    
     let contactoControlador = personaSeguraControlador()
     
     @IBOutlet weak var nombreContacto: UITextField!
+    
     @IBOutlet weak var descripcionContacto: UITextView!
     
     

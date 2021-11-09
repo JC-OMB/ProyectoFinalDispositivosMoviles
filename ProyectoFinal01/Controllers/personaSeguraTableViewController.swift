@@ -132,4 +132,38 @@ class personaSeguraTableViewController: UITableViewController {
         siguienteVista.modalPresentationStyle = .fullScreen
         self.present(siguienteVista, animated:true, completion:nil)    }
     
-}
+    @IBAction func editarTabla(_ sender: UIBarButtonItem) {
+        let modoEdicion = tableView.isEditing
+        tableView.setEditing(!modoEdicion, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            PersonaSeguraControlador.deletePersona(registroID: datos[indexPath.row].id){ (resultado) in
+                switch resultado{
+                case .success(let retorno): self.viewDidAppear(true)
+                case .failure(let error):self.displayError(e: error)
+                }
+                
+            }
+            
+        }
+    }
+    
+    func updateUI(){
+        
+      PersonaSeguraControlador.fetchPersonaSegura{ (resultado) in
+            switch resultado{
+            case .success(let listaPersonaSegura):self.updateGUI(listaPersonaSegura: listaPersonaSegura)
+            case .failure(let error):self.displayError(e: error)
+            }
+    }
+    }
+    
+    func displayError(_ error: Error, title: String) {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }}

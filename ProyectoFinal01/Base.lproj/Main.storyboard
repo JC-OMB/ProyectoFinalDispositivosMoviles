@@ -537,7 +537,11 @@
                                     <action selector="insertarContacto:" destination="CqQ-Mf-Lx0" id="lS3-6P-f1w"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="edit" id="Nh5-VT-maM"/>
+                            <barButtonItem systemItem="edit" id="Nh5-VT-maM">
+                                <connections>
+                                    <action selector="editarTabla:" destination="CqQ-Mf-Lx0" id="IFl-S6-WHm"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
