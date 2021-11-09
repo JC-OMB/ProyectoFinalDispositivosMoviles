@@ -191,7 +191,7 @@
         <!--Menu principal-->
         <scene sceneID="uSH-Sj-Um5">
             <objects>
-                <viewController id="zUD-kZ-1uS" sceneMemberID="viewController">
+                <viewController id="zUD-kZ-1uS" customClass="logOutViewController" customModule="ProyectoFinal01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGh-IH-Y7p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +269,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="signOut:" destination="zUD-kZ-1uS" eventType="touchUpInside" id="csv-1y-ndc"/>
                                     <segue destination="73U-Fl-sjA" kind="show" identifier="signOut" id="mZf-CO-UJd"/>
                                 </connections>
                             </button>
@@ -688,7 +689,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tl1-2Z-lLq"/>
         <segue reference="mZf-CO-UJd"/>
     </inferredMetricsTieBreakers>
     <resources>
