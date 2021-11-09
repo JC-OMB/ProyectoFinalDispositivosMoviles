@@ -16,6 +16,8 @@
 		145FF9692706A9A300B65A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */; };
 		148F04962732253900BCDD5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 148F04952732253900BCDD5E /* GoogleService-Info.plist */; };
 		27597A91AD1E0EF8DC0C01AC /* Pods_ProyectoFinal01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF5B546295B32B419A7429 /* Pods_ProyectoFinal01.framework */; };
+		2DB9A6B42739FD37008C4E7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9A6B32739FD37008C4E7C /* AuthViewController.swift */; };
+		2DB9A6B72739FE2C008C4E7C /* logOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9A6B62739FE2C008C4E7C /* logOutViewController.swift */; };
 		2DD40FA4270C0B1600183612 /* lugarSeguroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA3270C0B1600183612 /* lugarSeguroTableViewController.swift */; };
 		2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA6270C0B4800183612 /* personaSeguraTableViewController.swift */; };
 		2DD40FAA270C0C1A00183612 /* detalleLugarSeguroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FA9270C0C1A00183612 /* detalleLugarSeguroViewController.swift */; };
@@ -39,6 +41,8 @@
 		145FF9682706A9A300B65A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		145FF96A2706A9A300B65A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148F04952732253900BCDD5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DB9A6B32739FD37008C4E7C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2DB9A6B62739FE2C008C4E7C /* logOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logOutViewController.swift; sourceTree = "<group>"; };
 		2DD40FA3270C0B1600183612 /* lugarSeguroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lugarSeguroTableViewController.swift; sourceTree = "<group>"; };
 		2DD40FA6270C0B4800183612 /* personaSeguraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaSeguraTableViewController.swift; sourceTree = "<group>"; };
 		2DD40FA9270C0C1A00183612 /* detalleLugarSeguroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleLugarSeguroViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				145FF95E2706A99C00B65A49 /* SceneDelegate.swift */,
 				145FF9602706A99C00B65A49 /* ViewController.swift */,
 				145FF9622706A99C00B65A49 /* Main.storyboard */,
+				2DB9A6B62739FE2C008C4E7C /* logOutViewController.swift */,
+				2DB9A6B32739FD37008C4E7C /* AuthViewController.swift */,
 				145FF9652706A9A300B65A49 /* Assets.xcassets */,
 				2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */,
 				145FF9672706A9A300B65A49 /* LaunchScreen.storyboard */,
@@ -269,8 +275,10 @@
 				2DD40FA7270C0B4800183612 /* personaSeguraTableViewController.swift in Sources */,
 				ED860B282739B81600328C58 /* agregarContactoViewController.swift in Sources */,
 				2DD40FAD270C0C3500183612 /* detallePersonaSeguraViewController.swift in Sources */,
+				2DB9A6B42739FD37008C4E7C /* AuthViewController.swift in Sources */,
 				2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */,
 				142987542734B87300CED510 /* agregarDireccion.swift in Sources */,
+				2DB9A6B72739FE2C008C4E7C /* logOutViewController.swift in Sources */,
 				145FF95F2706A99C00B65A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
