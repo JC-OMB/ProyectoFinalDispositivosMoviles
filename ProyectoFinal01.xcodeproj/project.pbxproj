@@ -27,6 +27,7 @@
 		2DD40FBC270C289800183612 /* lugarSeguroControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FBB270C289800183612 /* lugarSeguroControlador.swift */; };
 		2DD40FBF270C28AD00183612 /* personaSeguraControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD40FBE270C28AD00183612 /* personaSeguraControlador.swift */; };
 		2DD6FA4D270D2AF9008CDC8A /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */; };
+		6DEAD7772756E81200D41BEB /* mapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEAD7762756E81200D41BEB /* mapaViewController.swift */; };
 		ED860B282739B81600328C58 /* agregarContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED860B272739B81600328C58 /* agregarContactoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		2DD40FBE270C28AD00183612 /* personaSeguraControlador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaSeguraControlador.swift; sourceTree = "<group>"; };
 		2DD6FA4C270D2AF9008CDC8A /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 		6B7C82C453EEA15F99657B89 /* Pods-ProyectoFinal01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoFinal01.debug.xcconfig"; path = "Target Support Files/Pods-ProyectoFinal01/Pods-ProyectoFinal01.debug.xcconfig"; sourceTree = "<group>"; };
+		6DEAD7762756E81200D41BEB /* mapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapaViewController.swift; sourceTree = "<group>"; };
 		981EE08F6B7929BA2A2020B8 /* Pods-ProyectoFinal01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoFinal01.release.xcconfig"; path = "Target Support Files/Pods-ProyectoFinal01/Pods-ProyectoFinal01.release.xcconfig"; sourceTree = "<group>"; };
 		DBDF5B546295B32B419A7429 /* Pods_ProyectoFinal01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoFinal01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED860B272739B81600328C58 /* agregarContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregarContactoViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				2DD40FA6270C0B4800183612 /* personaSeguraTableViewController.swift */,
 				2DD40FA9270C0C1A00183612 /* detalleLugarSeguroViewController.swift */,
 				2DD40FAC270C0C3500183612 /* detallePersonaSeguraViewController.swift */,
+				6DEAD7762756E81200D41BEB /* mapaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD40FB4270C1C9600183612 /* lugarSeguro.swift in Sources */,
+				6DEAD7772756E81200D41BEB /* mapaViewController.swift in Sources */,
 				145FF9612706A99C00B65A49 /* ViewController.swift in Sources */,
 				2DD40FBC270C289800183612 /* lugarSeguroControlador.swift in Sources */,
 				145FF95D2706A99C00B65A49 /* AppDelegate.swift in Sources */,
