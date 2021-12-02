@@ -9,20 +9,24 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class mapaViewController: UIViewController, CLLocationManagerDelegate {
+class mapaViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
 
     @IBOutlet weak var mapa: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        mapa.delegate = self
         
         mapa.showsTraffic = true
         mapa.showsScale = true
@@ -127,6 +131,7 @@ class mapaViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         
+        //Ubicacion iphone
         if status == .authorizedWhenInUse{
             //podemos usar la ubicación del iphone
             locationManager.startUpdatingLocation()
@@ -138,7 +143,71 @@ class mapaViewController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
-
+    
+    
+    @IBOutlet var textFieldForAddress: UITextField!
+    
+    @IBOutlet var getDirectionsButton: UIButton!
+    
+    
+    @IBAction func getDirectionsTapped(_ sender: Any) {
+        getAddress()
+    }
+    
+    func getAddress(){
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(textFieldForAddress.text!) { (
+        placemarks, error) in
+            guard let placemarks = placemarks, let location = placemarks.first?.location
+            else {
+                print("No Location Found")
+                return
+            }
+            print(location)
+            self.mapThis(destinationCord: location.coordinate)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+    }
+    
+    func mapThis(destinationCord : CLLocationCoordinate2D){
+        
+        let souceCordinate = (locationManager.location?.coordinate)!
+        
+        let soucePlaceMark = MKPlacemark(coordinate: souceCordinate)
+        let destPlaceMark = MKPlacemark(coordinate: destinationCord)
+        
+        let sourceItem = MKMapItem(placemark: soucePlaceMark)
+        let destItem = MKMapItem(placemark: destPlaceMark)
+        
+        let destinationRequest = MKDirections.Request()
+        destinationRequest.source = sourceItem
+        destinationRequest.destination = destItem
+        destinationRequest.transportType = .walking
+        destinationRequest.requestsAlternateRoutes = true
+        
+        let directions = MKDirections(request: destinationRequest)
+        directions.calculate{ (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("algo salio mal")
+                }
+                return
+            }
+            let route = response.routes[0]
+            self.mapa.addOverlay(route.polyline)
+            self.mapa.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+        }
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        render.strokeColor = .blue
+        return render
+    }
     /*
     // MARK: - Navigation
 
